@@ -5,12 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
     <title>Music</title>
+    <style>
+        
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="navbar">
-            <img src="media/logo.png" alt="" class="logo">
+            <!-- <img src="media/logo.png" alt="" class="logo"> -->
+            <div class="content-text">
+                <h2>Summer</h2>
+                <h2>Summer</h2>
+            </div>
             <ul>
                 <li><a href="#">Trang chủ</a></li>
                 <li><a href="#">Danh sách nhạc</a></li>
@@ -22,8 +30,16 @@
                 <h1>GÓC<br>NHẠC<br>CHILL</h1>
             </div>
             <div class="right-col">
-                <p>Nghe nhạc</p>
+                <p id="text">Nghe nhạc</p>
                 <img src="media/play.png" alt="" id="icon">
+            </div>
+            <div class="name">
+                <b>
+                    <span>Tình</span>
+                    <span>yêu</span>
+                    <span>khủng</span>
+                    <span>long</span>
+                </b>
             </div>
         </div>
     </div>
@@ -32,16 +48,22 @@
         <source src="TinhYeuKhungLong-FAY-6247040.mp3" type="audio/mp3">
     </audio>
     <script>
+        
         var mySong = document.getElementById("mySong");
         var icon = document.getElementById("icon");
         icon.onclick = function(){
+            $('.name b span').addClass('animate');
             if(mySong.paused){
+                document.getElementById('text').innerHTML = "Dừng";
                 mySong.play();
                 icon.src = "media/pause.png";
+                $('.name b span').css("animation-play-state", "running");
             }
             else{
+                document.getElementById('text').innerHTML = "Nghe nhạc";
                 mySong.pause();
                 icon.src = "media/play.png";
+                $('.name b span').css("animation-play-state", "paused");
             }
         }
     </script>
