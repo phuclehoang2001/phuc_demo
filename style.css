@@ -91,6 +91,7 @@
 
 .name b span{
     font-size: 1.4rem;
+    padding-left: 5px;
 }
 
 .paused {
@@ -171,5 +172,53 @@
     }
     50%{
         clip-path: polygon(0 57%, 15% 63%, 32% 67%, 46% 57%, 68% 46%, 86% 46%, 100% 56%, 100% 100%, 0 98%);
+    }
+}
+
+@font-face {
+    font-family: showcase;
+    src: url(fonts/SVN-Showcase\ Ornaments.ttf);
+}
+
+.symbol{
+    font-family: showcase;
+    font-size: 1.4rem;
+    margin-top: -20px;
+}
+
+
+/* samsung */
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .content{
+        top: 37%;
+    }
+    .content-text h2{     
+        font-size: 3rem;
+        margin-left: 80px;
+        margin-top: 0;
+    }
+    .right-col{
+        margin-top: 20px;
+    }
+    .navbar ul li a{
+        float: left;
+        display: block;
+        font-size: 1.2rem;
+        margin-left: 11rem;
+    }
+    
+    .left-col h1{
+        font-size: 65px;
+    }
+    .left-col{
+        margin-left: 25%;
+    }
+    .name{
+        width: 100%;
+        height: 30%;
+        margin-left: 16%;
+    }
+    .name b{
+        display: flex;
     }
 }
