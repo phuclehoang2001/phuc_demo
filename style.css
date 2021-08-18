@@ -39,6 +39,10 @@
     font-size: 1.5rem;
 }
 
+.navbar ul li a:hover{
+    color: rgba(95, 95, 95,0.5);
+}
+
 .content{
     width: 100%;
     position: absolute;
@@ -59,7 +63,7 @@
 .right-col{
     float: right;
     margin-right: 6%;
-    margin-top: 120px;
+    margin-top: 0;
     display: flex;
     align-items: center;
 }
@@ -77,10 +81,11 @@
 }
 
 .name{
-    margin-top: 100px;
-    display: flex;
+    margin-top: 70px;
     align-items: center;
-    margin-left: 43%;
+    margin-left: 36.2%;
+    text-align: center;
+    width: 400px;
 }
 
 .name b{
@@ -92,6 +97,7 @@
 .name b span{
     font-size: 1.4rem;
     padding-left: 5px;
+    word-spacing: 1.5px;
 }
 
 .paused {
@@ -166,6 +172,177 @@
     color: #fee;
     animation: animateText 4s ease-in-out infinite;
 }
+
+.list-item{
+    position: absolute;
+    background-color: #f3c8c7;
+    width: 300px;
+    z-index: 1;
+    margin: 20px 10% 0 -120px;
+    padding: 10px 20px 20px 20px;
+    top: 45px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    transform-origin: 90% top;
+    animation: headerListMusic ease-in 0.3s;
+    will-change: opacity, transform;
+    display: none;
+}
+
+.list_music:hover .list-item{
+    display: block;
+}
+
+@keyframes headerListMusic {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+.list-item::before{
+    content: "";
+    border-style: solid;
+    border-width: 20px 30px;
+    border-color: transparent transparent #f3c8c7 transparent;
+    position: relative;
+    top: -45px;
+    left: 80%;
+}
+
+.list-item::after{
+    content: "";
+    position: absolute;
+    display: block;
+    right: 0;
+    top: -24px;
+    width: 100%;
+    height: 24px;
+    /* background-color: red; */
+}
+
+.list-item h2{
+    color: #fff;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-weight: 500;
+    border-bottom: 2px solid #fff;
+}
+
+.list-item ul{
+    position: relative;
+}
+
+.list-item ul li{
+    position: relative;
+    list-style: none;
+    display: table;
+    margin: 10px 0;
+    padding-left: 34px;
+    padding-right: 5px;
+}
+
+.list-item ul li::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 34px;
+    background: transparent;
+    border-radius: 34px;
+    transition: background 0.5s, width 0.5s;
+    transition-delay: 0.5s, 0s;
+    border: 2px solid #CAEAE5;
+    box-sizing: border-box;
+}
+
+.list-item ul li:hover::before{
+    width: 100%;
+    background: #CAEAE5;
+    transition-delay: 0s, 0.5s;
+    cursor: pointer;
+}
+
+.list-item ul li::after{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 7px;
+    height: 6px;
+	border-right: 12px solid transparent;
+    border-bottom: 12px solid #fff;
+    transform: rotate(-136deg);
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.list-item ul li:hover::after{
+    left: 15px;
+    transition-delay: 0.5s;
+    transform: rotate(224deg) scale(1.2);
+    cursor: pointer;
+    top: 11px;
+}
+
+.list-item ul li:hover p{
+    right: -4px;
+}
+
+.list-item ul li p{
+    position: relative;
+    z-index: 10;
+    padding: 8px 10px;
+    font-weight: 600;
+    color: #fff;
+    transition-delay: 0.6s;
+    transition: right linear 0.2s;
+    right: 0;
+    
+}
+
+.list-item ul li p:hover{
+    right: -4px;
+    cursor:pointer;  
+}
+
+.list-item-effect{
+    content: "";
+    display: block;
+    position: absolute;
+    border: 1px solid #CAEAE5;
+    border-radius: 34px;
+}
+
+.symbol{
+    font-family: showcase;
+    font-size: 1.4rem;
+    margin-top: -20px;
+    margin-right: -15px
+    
+}
+
+#icon:hover{
+    transform: scale(1.1);
+}
+
+.name b span:nth-child(2){
+    font-family: svn-oneday;
+}
+
+
+@font-face {
+    font-family: showcase;
+    src: url(fonts/SVN-Showcase\ Ornaments.ttf);
+}
+
+@font-face {
+    font-family: svn-oneday;
+    src: url(fonts/SVN-One\ Day.otf);
+}
+
 @keyframes animateText {
     0%,100%{
         clip-path: polygon(0 55%, 18% 50%, 34% 49%, 51% 54%, 71% 60%, 86% 55%, 100% 44%, 100% 100%, 0 98%);
@@ -175,22 +352,12 @@
     }
 }
 
-@font-face {
-    font-family: showcase;
-    src: url(fonts/SVN-Showcase\ Ornaments.ttf);
-}
-
-.symbol{
-    font-family: showcase;
-    font-size: 1.4rem;
-    margin-top: -20px;
-}
 
 
 /* samsung */
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .content{
-        top: 37%;
+        top: 27%;
     }
     .content-text h2{     
         font-size: 3rem;
@@ -198,7 +365,7 @@
         margin-top: 0;
     }
     .right-col{
-        margin-top: 20px;
+        margin-top: 15px;
     }
     .navbar ul li a{
         float: left;
@@ -216,9 +383,44 @@
     .name{
         width: 100%;
         height: 30%;
-        margin-left: 16%;
+        margin-top: 270px;
+        margin-left: -10px;
+        text-align: center;
+
     }
-    .name b{
-        display: flex;
+   
+    .symbol{
+        margin-right: -20px;
+    }
+
+    .navbar ul li{
+        margin: 2px 15px;
+    }
+
+    .navbar ul {
+        display: block !important;
+    }
+
+    .list-item::before{
+        display: none;
+    }
+
+    .list-item{
+        margin-left: 0;
+        margin-top: 125px;
+        padding-bottom: 10px;
+    }
+
+    .list-item-header{
+        text-align: center;
+    }
+    
+    #tab li{ 
+        padding-left: 5px;
+        margin: 10px 0 10px 0px;
+    }
+
+    #tab li p{
+        padding-left: 36px;
     }
 }

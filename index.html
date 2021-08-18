@@ -19,10 +19,22 @@
                 <h2>Summer</h2>
                 <h2>Summer</h2>
             </div>
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Danh sách nhạc</a></li>
-                <li><a href="#">Giới thiệu</a></li>
+            <ul style="display: flex;">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li class="list_music">
+                    <a href="#">Danh sách nhạc</a>
+                    <div class="list-item">
+                        <header class="list-item-header">
+                            <h2>Nhạc hiện có</h2>
+                        </header>   
+                        <ul id="tab">
+                            <li class="list-item-effect"><p>Tình yêu khủng long - Fay</p></li>
+                            <li><p>Cổ điển - Tofu</p></li>
+                            <li><p>Ghé qua - Dick x tofu</p></li>
+                            <li><p>Lạ lùng - Vũ</p></li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </div>
         <div class="content">
@@ -34,10 +46,7 @@
                     <span class="symbol">
                         g
                     </span>
-                    <span>Tình</span>
-                    <span>yêu</span>
-                    <span>khủng</span>
-                    <span>long</span>
+                    <span>Tình yêu khủng long</span>
                     <span class="symbol">
                         g
                     </span>
@@ -45,34 +54,17 @@
             </div>
             <div class="right-col">
                 <p id="text">Nghe nhạc</p>
-                <img src="media/play.png" alt="" id="icon">
+                <img src="media/play.png" id="icon" alt="" >
             </div>
         </div>
+        
     </div>
     
     <audio id="mySong">
-        <source src="TinhYeuKhungLong-FAY-6247040.mp3" type="audio/mp3">
+        <source src="mp3/TinhYeuKhungLong-FAY-6247040.mp3" type="audio/mp3">
     </audio>
-    <script>
-        
-        var mySong = document.getElementById("mySong");
-        var icon = document.getElementById("icon");
-        icon.onclick = function(){
-            $('.name b span').addClass('animate');
-            if(mySong.paused){
-                document.getElementById('text').innerHTML = "Dừng";
-                mySong.play();
-                icon.src = "media/pause.png";
-                $('.name b span').css("animation-play-state", "running");
-            }
-            else{
-                document.getElementById('text').innerHTML = "Nghe nhạc";
-                mySong.pause();
-                icon.src = "media/play.png";
-                $('.name b span').css("animation-play-state", "paused");
-            }
-        }
-    </script>
+
+    <script src="js/selector.js"></script>
 </body>
 
 </html>
