@@ -176,7 +176,6 @@
 .list-item{
     position: absolute;
     background-color: #f3c8c7;
-    width: 300px;
     z-index: 1;
     margin: 20px 10% 0 -120px;
     padding: 10px 20px 20px 20px;
@@ -250,7 +249,7 @@
     top: 0;
     left: 0;
     width: 34px;
-    height: 34px;
+    height: 34.4px;
     background: transparent;
     border-radius: 34px;
     transition: background 0.5s, width 0.5s;
@@ -409,13 +408,15 @@
         margin-left: 0;
         margin-top: 125px;
         padding-bottom: 10px;
-        width: 320px;
+    
     }
 
     .list-item-header{
         text-align: center;
     }
-    
+    #tab{
+        width: 320px ;
+    }
     #tab li{ 
         padding-left: 5px;
         margin: 10px 0 10px 0px;
