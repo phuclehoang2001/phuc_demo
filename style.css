@@ -174,12 +174,12 @@
 }
 
 .list-item{
-    width: 300px;
     position: absolute;
     background-color: #f3c8c7;
     z-index: 1;
     margin: 20px 10% 0 -120px;
     padding: 10px 20px 20px 20px;
+    width: 300px;
     top: 45px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
     border-radius: 3px;
