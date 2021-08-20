@@ -43,7 +43,7 @@ $(function(){
 let arrayMusic =[
     ['TinhYeuKhungLong-FAY-6247040.mp3', 'Tình yêu khủng long','g'],
     ['Cổ Điển - Classic Love - Tofu x VoVanDuc. (Official Audio).mp3','Cổ điển','p'],
-    ['Ghé qua - OFFICIAL MV - Dick x PC x Tofu.mp3','Ghé qua','d'],
+    ['GHÉ QUA - OFFICIAL MV - Dick x PC x Tofu.mp3','Ghé qua','d'],
     ['Lạ Lùng.mp3','Lạ lùng','n']
 ];
 
